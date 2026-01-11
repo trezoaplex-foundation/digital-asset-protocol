@@ -1,7 +1,7 @@
 use std::cmp::Ordering;
 use std::collections::BTreeMap;
 use bebop::Record;
-use solana_program::account_info::AccountInfo;
+use trezoa_program::account_info::AccountInfo;
 use crate::api::DigitalAssetProtocolError;
 use crate::blob::Asset;
 use crate::generated::schema::owned::{ModuleType, ModuleData, DataItemValue};
@@ -32,24 +32,24 @@ pub struct AccountMap<'raw> {
     map: BTreeMap<String, &'raw AccountInfo<'raw>>,
 }
 
-impl<'raw> AccountMap<'raw> {
+itpl<'raw> AccountMap<'raw> {
     pub fn insert(&mut self, key: String, info: &'raw AccountInfo<'raw>) {
         self.map.insert(key, info);
     }
 
     pub fn get(&self, key: String) -> Result<&'raw AccountInfo, DigitalAssetProtocolError> {
-        self.map.get(&key).map(|a| *a).ok_or(DigitalAssetProtocolError::InterfaceNoImpl)
+        self.map.get(&key).map(|a| *a).ok_or(DigitalAssetProtocolError::InterfaceNoItpl)
     }
 }
 
-impl ModuleProcessor for NullModuleProcessor {
+itpl ModuleProcessor for NullModuleProcessor {
     fn create<'raw>(&self, asset: &mut Asset)
                     -> Result<(), DigitalAssetProtocolError> {
         Ok(())
     }
 }
 
-impl ModuleType {
+itpl ModuleType {
     pub fn to_data(module: ModuleType, raw_data: &[u8]) -> Result<Option<ModuleData>, DigitalAssetProtocolError> {
         ModuleData::deserialize(raw_data)
             .map_err(|e| e.into())
@@ -75,7 +75,7 @@ pub enum ModuleId {
     Extension(SchemaId),
 }
 
-impl PartialOrd<Self> for ModuleType {
+itpl PartialOrd<Self> for ModuleType {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         let d: u8 = u8::from(*self);
         let o: u8 = u8::from(*other);
@@ -83,7 +83,7 @@ impl PartialOrd<Self> for ModuleType {
     }
 }
 
-impl Ord for ModuleType {
+itpl Ord for ModuleType {
     fn cmp(&self, other: &Self) -> Ordering {
         let d: u8 = u8::from(*self);
         let o: u8 = u8::from(*other);

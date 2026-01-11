@@ -19,7 +19,7 @@ pub use asset::*;
 //     fn set_thing(&mut self, id: ModuleType, m: Module) -> () ;
 // }
 // 
-// impl Shizzle for Asset {
+// itpl Shizzle for Asset {
 //     fn keys(&self) -> Vec<&u32>  {
 //         self.layout.keys().into_iter().collect::<Vec<&u32>>()
 //     }
@@ -41,7 +41,7 @@ pub use asset::*;
 //     remaining_accounts: Vec<AccountInfo>,
 // }
 // 
-// impl CreateNFTContext {
+// itpl CreateNFTContext {
 //     fn validate(&self) -> Result<(), DigitalAssetProtocolError> {
 //         if !self.payer.is_signer {
 //             return Err(DigitalAssetProtocolError::ActionError("Payer must sign".to_string()));
@@ -67,7 +67,7 @@ pub use asset::*;
 //                 //     create_creators(self, asset_new)
 //                 // }
 //                 _ => Err(DigitalAssetProtocolError::ActionError(
-//                     "Not Implemented".to_string(),
+//                     "Not Itplemented".to_string(),
 //                 )),
 //             }?;
 //         }
@@ -84,7 +84,7 @@ pub use asset::*;
 // //     // validation of create ownership specific stuff
 // //     let Some(Module::Ownership { model, owner }) =
 // //         asset.layout.get(&(ModuleType::Ownership as u32));
-// //     if *model == OwnershipModel::Token && ctx.owner.owner != &spl_token::id() {
+// //     if *model == OwnershipModel::Token && ctx.owner.owner != &tpl_token::id() {
 // //         return Err(DigitalAssetProtocolError::ModuleError(
 // //             "Token Owner must be a Mint".to_string(),
 // //         ));

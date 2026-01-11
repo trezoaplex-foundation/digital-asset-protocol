@@ -1,10 +1,10 @@
 import test from 'tape';
-import {Amman, LOCALHOST} from '@metaplex-foundation/amman';
-import * as web3 from '@solana/web3.js';
-import {Connection, Keypair, PublicKey, Transaction, TransactionInstruction} from '@solana/web3.js';
+import {Amman, LOCALHOST} from '@trezoaplex-foundation/amman';
+import * as web3 from '@trezoa/web3.js';
+import {Connection, Keypair, PublicKey, Transaction, TransactionInstruction} from '@trezoa/web3.js';
 import debug from 'debug';
-import * as beetSolana from '@metaplex-foundation/beet-solana';
-import * as beet from '@metaplex-foundation/beet';
+import * as beetTrezoa from '@trezoaplex-foundation/beet-trezoa';
+import * as beet from '@trezoaplex-foundation/beet';
 import {DigitalAssetTypes} from "../ts/generated/models";
 import uuid from "uuid";
 import nacl from 'tweetnacl';
@@ -47,7 +47,7 @@ export type Creator = {
  */
 export const creatorBeet = new beet.BeetArgsStruct<Creator>(
     [
-        ['address', beetSolana.publicKey],
+        ['address', beetTrezoa.publicKey],
         ['verified', beet.bool],
         ['share', beet.u8],
     ],

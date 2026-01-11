@@ -1,6 +1,6 @@
-use solana_program::pubkey::Pubkey;
+use trezoa_program::pubkey::Pubkey;
 use std::io::Result;
-use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, SolanaMock};
+use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, TrezoaMock};
 
 use borsh::{BorshSerialize, BorshDeserialize};
 
@@ -17,7 +17,7 @@ struct Supply {
 
 /// ROYALTIES ENFORCED AT PROTOCOL LEVEL like EIP 2981
 
-impl ModuleType for Supply {
+itpl ModuleType for Supply {
     fn id(&self) -> Modules {
         Modules::Supply
     }

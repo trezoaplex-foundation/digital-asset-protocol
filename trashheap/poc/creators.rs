@@ -1,6 +1,6 @@
 use std::io::{Error, ErrorKind};
-use solana_program::pubkey::Pubkey;
-use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, SolanaMock};
+use trezoa_program::pubkey::Pubkey;
+use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, TrezoaMock};
 use std::io::Result;
 use borsh::{BorshSerialize, BorshDeserialize};
 
@@ -23,7 +23,7 @@ pub struct Creators {
 
 /// ROYALTIES ENFORCED AT PROTOCOL LEVEL like EIP 2981
 
-impl ModuleType for Creators {
+itpl ModuleType for Creators {
     fn id(&self) -> Modules {
         Modules::Creators
     }

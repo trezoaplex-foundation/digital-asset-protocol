@@ -1,6 +1,6 @@
 use std::cell::RefMut;
 use std::collections::{BTreeMap};
-use solana_program::account_info::AccountInfo;
+use trezoa_program::account_info::AccountInfo;
 use crate::api::{DigitalAssetProtocolError};
 use crate::interfaces::ContextAction;
 use crate::lifecycle::Lifecycle;
@@ -15,7 +15,7 @@ pub struct UpdateV1<'info> {
     pub payload: String,
 }
 
-impl<'info> UpdateV1<'info> {
+itpl<'info> UpdateV1<'info> {
     pub fn new(accounts: &[AccountInfo<'info>], action: ActionData) -> Result<(Self, usize), DigitalAssetProtocolError> {
         if let ActionData::UpdateAssetV1 {
             msg
@@ -38,7 +38,7 @@ impl<'info> UpdateV1<'info> {
     }
 }
 
-impl ContextAction for UpdateV1<'_> {
+itpl ContextAction for UpdateV1<'_> {
     fn lifecycle(&self) -> &Lifecycle {
         &Lifecycle::Update
     }

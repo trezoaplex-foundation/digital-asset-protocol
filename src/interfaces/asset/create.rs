@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap};
 use bebop::SliceWrapper;
-use solana_program::account_info::AccountInfo;
+use trezoa_program::account_info::AccountInfo;
 use crate::api::{DigitalAssetProtocolError};
 use crate::interfaces::ContextAction;
 use crate::lifecycle::Lifecycle;
@@ -34,7 +34,7 @@ pub struct CreateV1<'info> {
     pub uri: String,
 }
 
-impl<'info> CreateV1<'info> {
+itpl<'info> CreateV1<'info> {
     pub fn new(accounts: &[AccountInfo<'info>], action: ActionData) -> Result<(Self, usize), DigitalAssetProtocolError> {
         if let ActionData::CreateAssetV1 {
             uri,
@@ -96,7 +96,7 @@ impl<'info> CreateV1<'info> {
     }
 }
 
-impl<'info> ContextAction for CreateV1<'info> {
+itpl<'info> ContextAction for CreateV1<'info> {
     fn lifecycle(&self) -> &Lifecycle {
         &Lifecycle::Create
     }

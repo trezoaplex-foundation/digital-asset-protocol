@@ -32,7 +32,7 @@ pub enum Interface {
     IdentityAsset = 6,
 }
 
-impl ::core::convert::TryFrom<u8> for Interface {
+itpl ::core::convert::TryFrom<u8> for Interface {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -51,7 +51,7 @@ impl ::core::convert::TryFrom<u8> for Interface {
     }
 }
 
-impl ::core::convert::From<Interface> for u8 {
+itpl ::core::convert::From<Interface> for u8 {
     fn from(value: Interface) -> Self {
         match value {
             Interface::Unknown => 0,
@@ -65,7 +65,7 @@ impl ::core::convert::From<Interface> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for Interface {
+itpl ::bebop::SubRecord<'_> for Interface {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -86,7 +86,7 @@ impl ::bebop::SubRecord<'_> for Interface {
     }
 }
 
-impl ::bebop::FixedSized for Interface {
+itpl ::bebop::FixedSized for Interface {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -104,7 +104,7 @@ pub enum ModuleType {
     Governance = 8,
 }
 
-impl ::core::convert::TryFrom<u8> for ModuleType {
+itpl ::core::convert::TryFrom<u8> for ModuleType {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -125,7 +125,7 @@ impl ::core::convert::TryFrom<u8> for ModuleType {
     }
 }
 
-impl ::core::convert::From<ModuleType> for u8 {
+itpl ::core::convert::From<ModuleType> for u8 {
     fn from(value: ModuleType) -> Self {
         match value {
             ModuleType::Invalid => 0,
@@ -141,7 +141,7 @@ impl ::core::convert::From<ModuleType> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for ModuleType {
+itpl ::bebop::SubRecord<'_> for ModuleType {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -162,7 +162,7 @@ impl ::bebop::SubRecord<'_> for ModuleType {
     }
 }
 
-impl ::bebop::FixedSized for ModuleType {
+itpl ::bebop::FixedSized for ModuleType {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -196,7 +196,7 @@ pub enum ModuleData<'raw> {
     },
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for ModuleData<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for ModuleData<'raw> {
     const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
     fn serialized_size(&self) -> usize {
@@ -329,7 +329,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for ModuleData<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for ModuleData<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for ModuleData<'raw> {}
 
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
@@ -339,7 +339,7 @@ pub enum Encoding {
     Bincode = 2,
 }
 
-impl ::core::convert::TryFrom<u8> for Encoding {
+itpl ::core::convert::TryFrom<u8> for Encoding {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -354,7 +354,7 @@ impl ::core::convert::TryFrom<u8> for Encoding {
     }
 }
 
-impl ::core::convert::From<Encoding> for u8 {
+itpl ::core::convert::From<Encoding> for u8 {
     fn from(value: Encoding) -> Self {
         match value {
             Encoding::Invalid => 0,
@@ -364,7 +364,7 @@ impl ::core::convert::From<Encoding> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for Encoding {
+itpl ::bebop::SubRecord<'_> for Encoding {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -385,7 +385,7 @@ impl ::bebop::SubRecord<'_> for Encoding {
     }
 }
 
-impl ::bebop::FixedSized for Encoding {
+itpl ::bebop::FixedSized for Encoding {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -419,7 +419,7 @@ pub enum DataItemValue<'raw> {
     },
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for DataItemValue<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for DataItemValue<'raw> {
     const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
     fn serialized_size(&self) -> usize {
@@ -707,7 +707,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for DataItemValue<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for DataItemValue<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for DataItemValue<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct DataItem<'raw> {
@@ -715,7 +715,7 @@ pub struct DataItem<'raw> {
     pub value: DataItemValue<'raw>,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for DataItem<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for DataItem<'raw> {
     const MIN_SERIALIZED_SIZE: usize =
         <&'raw str>::MIN_SERIALIZED_SIZE + <DataItemValue<'raw>>::MIN_SERIALIZED_SIZE;
 
@@ -744,7 +744,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for DataItem<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for DataItem<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for DataItem<'raw> {}
 
 #[derive(Clone, Debug, PartialEq, Default)]
 pub struct Blob<'raw> {
@@ -756,7 +756,7 @@ pub struct Blob<'raw> {
     pub data_module: ::core::option::Option<::std::vec::Vec<DataItem<'raw>>>,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for Blob<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for Blob<'raw> {
     const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
     #[inline]
@@ -886,14 +886,14 @@ impl<'raw> ::bebop::SubRecord<'raw> for Blob<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for Blob<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for Blob<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct BlobContainer<'raw> {
     pub blobs: ::std::vec::Vec<Blob<'raw>>,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for BlobContainer<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for BlobContainer<'raw> {
     const MIN_SERIALIZED_SIZE: usize = <::std::vec::Vec<Blob<'raw>>>::MIN_SERIALIZED_SIZE;
 
     #[inline]
@@ -919,7 +919,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for BlobContainer<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for BlobContainer<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for BlobContainer<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Authority<'raw> {
@@ -927,7 +927,7 @@ pub struct Authority<'raw> {
     pub address: ::bebop::SliceWrapper<'raw, u8>,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for Authority<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for Authority<'raw> {
     const MIN_SERIALIZED_SIZE: usize = <::std::vec::Vec<&'raw str>>::MIN_SERIALIZED_SIZE
         + <::bebop::SliceWrapper<'raw, u8>>::MIN_SERIALIZED_SIZE;
 
@@ -962,7 +962,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for Authority<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for Authority<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for Authority<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Action<'raw> {
@@ -970,7 +970,7 @@ pub struct Action<'raw> {
     pub data: ActionData<'raw>,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for Action<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for Action<'raw> {
     const MIN_SERIALIZED_SIZE: usize =
         <Interface>::MIN_SERIALIZED_SIZE + <ActionData<'raw>>::MIN_SERIALIZED_SIZE;
 
@@ -1005,7 +1005,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for Action<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for Action<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for Action<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum ActionData<'raw> {
@@ -1043,7 +1043,7 @@ pub enum ActionData<'raw> {
     },
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for ActionData<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for ActionData<'raw> {
     const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
     fn serialized_size(&self) -> usize {
@@ -1437,7 +1437,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for ActionData<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for ActionData<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for ActionData<'raw> {}
 
 pub const MAX_MODULES: i32 = 10;
 
@@ -1449,7 +1449,7 @@ pub enum OwnershipModel {
     Token = 2,
 }
 
-impl ::core::convert::TryFrom<u8> for OwnershipModel {
+itpl ::core::convert::TryFrom<u8> for OwnershipModel {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -1464,7 +1464,7 @@ impl ::core::convert::TryFrom<u8> for OwnershipModel {
     }
 }
 
-impl ::core::convert::From<OwnershipModel> for u8 {
+itpl ::core::convert::From<OwnershipModel> for u8 {
     fn from(value: OwnershipModel) -> Self {
         match value {
             OwnershipModel::Invalid => 0,
@@ -1474,7 +1474,7 @@ impl ::core::convert::From<OwnershipModel> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for OwnershipModel {
+itpl ::bebop::SubRecord<'_> for OwnershipModel {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -1495,7 +1495,7 @@ impl ::bebop::SubRecord<'_> for OwnershipModel {
     }
 }
 
-impl ::bebop::FixedSized for OwnershipModel {
+itpl ::bebop::FixedSized for OwnershipModel {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -1508,7 +1508,7 @@ pub enum RoyaltyModel {
     Creators = 3,
 }
 
-impl ::core::convert::TryFrom<u8> for RoyaltyModel {
+itpl ::core::convert::TryFrom<u8> for RoyaltyModel {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -1524,7 +1524,7 @@ impl ::core::convert::TryFrom<u8> for RoyaltyModel {
     }
 }
 
-impl ::core::convert::From<RoyaltyModel> for u8 {
+itpl ::core::convert::From<RoyaltyModel> for u8 {
     fn from(value: RoyaltyModel) -> Self {
         match value {
             RoyaltyModel::Invalid => 0,
@@ -1535,7 +1535,7 @@ impl ::core::convert::From<RoyaltyModel> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for RoyaltyModel {
+itpl ::bebop::SubRecord<'_> for RoyaltyModel {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -1556,7 +1556,7 @@ impl ::bebop::SubRecord<'_> for RoyaltyModel {
     }
 }
 
-impl ::bebop::FixedSized for RoyaltyModel {
+itpl ::bebop::FixedSized for RoyaltyModel {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -1566,7 +1566,7 @@ pub struct RoyaltyTarget<'raw> {
     pub share: u8,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for RoyaltyTarget<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for RoyaltyTarget<'raw> {
     const MIN_SERIALIZED_SIZE: usize =
         <::bebop::SliceWrapper<'raw, u8>>::MIN_SERIALIZED_SIZE + <u8>::MIN_SERIALIZED_SIZE;
 
@@ -1601,7 +1601,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for RoyaltyTarget<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for RoyaltyTarget<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for RoyaltyTarget<'raw> {}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Creator<'raw> {
@@ -1610,7 +1610,7 @@ pub struct Creator<'raw> {
     pub verified: bool,
 }
 
-impl<'raw> ::bebop::SubRecord<'raw> for Creator<'raw> {
+itpl<'raw> ::bebop::SubRecord<'raw> for Creator<'raw> {
     const MIN_SERIALIZED_SIZE: usize = <::bebop::SliceWrapper<'raw, u8>>::MIN_SERIALIZED_SIZE
         + <u8>::MIN_SERIALIZED_SIZE
         + <bool>::MIN_SERIALIZED_SIZE;
@@ -1653,7 +1653,7 @@ impl<'raw> ::bebop::SubRecord<'raw> for Creator<'raw> {
     }
 }
 
-impl<'raw> ::bebop::Record<'raw> for Creator<'raw> {}
+itpl<'raw> ::bebop::Record<'raw> for Creator<'raw> {}
 
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq)]
@@ -1673,7 +1673,7 @@ pub enum Lifecycle {
     DeactivateExtension = 12,
 }
 
-impl ::core::convert::TryFrom<u8> for Lifecycle {
+itpl ::core::convert::TryFrom<u8> for Lifecycle {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -1698,7 +1698,7 @@ impl ::core::convert::TryFrom<u8> for Lifecycle {
     }
 }
 
-impl ::core::convert::From<Lifecycle> for u8 {
+itpl ::core::convert::From<Lifecycle> for u8 {
     fn from(value: Lifecycle) -> Self {
         match value {
             Lifecycle::Invalid => 0,
@@ -1718,7 +1718,7 @@ impl ::core::convert::From<Lifecycle> for u8 {
     }
 }
 
-impl ::bebop::SubRecord<'_> for Lifecycle {
+itpl ::bebop::SubRecord<'_> for Lifecycle {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -1739,7 +1739,7 @@ impl ::bebop::SubRecord<'_> for Lifecycle {
     }
 }
 
-impl ::bebop::FixedSized for Lifecycle {
+itpl ::bebop::FixedSized for Lifecycle {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -1749,14 +1749,14 @@ pub enum JsonDataSchema {
     Invalid = 0,
     Core = 1,
     MultiMedia = 2,
-    SimpleImage = 3,
-    SimpleAudio = 4,
-    Simple3D = 5,
-    SimpleText = 6,
+    SitpleImage = 3,
+    SitpleAudio = 4,
+    Sitple3D = 5,
+    SitpleText = 6,
     MusicRecording = 7,
 }
 
-impl ::core::convert::TryFrom<u8> for JsonDataSchema {
+itpl ::core::convert::TryFrom<u8> for JsonDataSchema {
     type Error = ::bebop::DeserializeError;
 
     fn try_from(value: u8) -> ::bebop::DeResult<Self> {
@@ -1764,10 +1764,10 @@ impl ::core::convert::TryFrom<u8> for JsonDataSchema {
             0 => Ok(JsonDataSchema::Invalid),
             1 => Ok(JsonDataSchema::Core),
             2 => Ok(JsonDataSchema::MultiMedia),
-            3 => Ok(JsonDataSchema::SimpleImage),
-            4 => Ok(JsonDataSchema::SimpleAudio),
-            5 => Ok(JsonDataSchema::Simple3D),
-            6 => Ok(JsonDataSchema::SimpleText),
+            3 => Ok(JsonDataSchema::SitpleImage),
+            4 => Ok(JsonDataSchema::SitpleAudio),
+            5 => Ok(JsonDataSchema::Sitple3D),
+            6 => Ok(JsonDataSchema::SitpleText),
             7 => Ok(JsonDataSchema::MusicRecording),
             d => Err(::bebop::DeserializeError::InvalidEnumDiscriminator(
                 d.into(),
@@ -1776,22 +1776,22 @@ impl ::core::convert::TryFrom<u8> for JsonDataSchema {
     }
 }
 
-impl ::core::convert::From<JsonDataSchema> for u8 {
+itpl ::core::convert::From<JsonDataSchema> for u8 {
     fn from(value: JsonDataSchema) -> Self {
         match value {
             JsonDataSchema::Invalid => 0,
             JsonDataSchema::Core => 1,
             JsonDataSchema::MultiMedia => 2,
-            JsonDataSchema::SimpleImage => 3,
-            JsonDataSchema::SimpleAudio => 4,
-            JsonDataSchema::Simple3D => 5,
-            JsonDataSchema::SimpleText => 6,
+            JsonDataSchema::SitpleImage => 3,
+            JsonDataSchema::SitpleAudio => 4,
+            JsonDataSchema::Sitple3D => 5,
+            JsonDataSchema::SitpleText => 6,
             JsonDataSchema::MusicRecording => 7,
         }
     }
 }
 
-impl ::bebop::SubRecord<'_> for JsonDataSchema {
+itpl ::bebop::SubRecord<'_> for JsonDataSchema {
     const MIN_SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
     const EXACT_SERIALIZED_SIZE: Option<usize> = Some(::std::mem::size_of::<u8>());
 
@@ -1812,7 +1812,7 @@ impl ::bebop::SubRecord<'_> for JsonDataSchema {
     }
 }
 
-impl ::bebop::FixedSized for JsonDataSchema {
+itpl ::bebop::FixedSized for JsonDataSchema {
     const SERIALIZED_SIZE: usize = ::std::mem::size_of::<u8>();
 }
 
@@ -1856,7 +1856,7 @@ pub mod owned {
         },
     }
 
-    impl<'raw> ::core::convert::From<super::ModuleData<'raw>> for ModuleData {
+    itpl<'raw> ::core::convert::From<super::ModuleData<'raw>> for ModuleData {
         fn from(value: super::ModuleData) -> Self {
             match value {
                 super::ModuleData::Unknown => Self::Unknown,
@@ -1891,7 +1891,7 @@ pub mod owned {
             }
         }
     }
-    impl<'raw> ::bebop::SubRecord<'raw> for ModuleData {
+    itpl<'raw> ::bebop::SubRecord<'raw> for ModuleData {
         const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
         fn serialized_size(&self) -> usize {
@@ -2027,7 +2027,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for ModuleData {}
+    itpl<'raw> ::bebop::Record<'raw> for ModuleData {}
 
     pub use super::Encoding;
 
@@ -2061,7 +2061,7 @@ pub mod owned {
         },
     }
 
-    impl<'raw> ::core::convert::From<super::DataItemValue<'raw>> for DataItemValue {
+    itpl<'raw> ::core::convert::From<super::DataItemValue<'raw>> for DataItemValue {
         fn from(value: super::DataItemValue) -> Self {
             match value {
                 super::DataItemValue::Unknown => Self::Unknown,
@@ -2080,7 +2080,7 @@ pub mod owned {
             }
         }
     }
-    impl<'raw> ::bebop::SubRecord<'raw> for DataItemValue {
+    itpl<'raw> ::bebop::SubRecord<'raw> for DataItemValue {
         const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
         fn serialized_size(&self) -> usize {
@@ -2371,7 +2371,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for DataItemValue {}
+    itpl<'raw> ::bebop::Record<'raw> for DataItemValue {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub struct DataItem {
@@ -2379,7 +2379,7 @@ pub mod owned {
         pub value: DataItemValue,
     }
 
-    impl<'raw> ::core::convert::From<super::DataItem<'raw>> for DataItem {
+    itpl<'raw> ::core::convert::From<super::DataItem<'raw>> for DataItem {
         fn from(value: super::DataItem) -> Self {
             Self {
                 key: value.key.into(),
@@ -2388,7 +2388,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for DataItem {
+    itpl<'raw> ::bebop::SubRecord<'raw> for DataItem {
         const MIN_SERIALIZED_SIZE: usize =
             <String>::MIN_SERIALIZED_SIZE + <DataItemValue>::MIN_SERIALIZED_SIZE;
 
@@ -2420,7 +2420,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for DataItem {}
+    itpl<'raw> ::bebop::Record<'raw> for DataItem {}
 
     #[derive(Clone, Debug, PartialEq, Default)]
     pub struct Blob {
@@ -2432,7 +2432,7 @@ pub mod owned {
         pub data_module: ::core::option::Option<::std::vec::Vec<DataItem>>,
     }
 
-    impl<'raw> ::core::convert::From<super::Blob<'raw>> for Blob {
+    itpl<'raw> ::core::convert::From<super::Blob<'raw>> for Blob {
         fn from(value: super::Blob) -> Self {
             Self {
                 module_id: value.module_id,
@@ -2444,7 +2444,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for Blob {
+    itpl<'raw> ::bebop::SubRecord<'raw> for Blob {
         const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
         #[inline]
@@ -2577,14 +2577,14 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for Blob {}
+    itpl<'raw> ::bebop::Record<'raw> for Blob {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub struct BlobContainer {
         pub blobs: ::std::vec::Vec<Blob>,
     }
 
-    impl<'raw> ::core::convert::From<super::BlobContainer<'raw>> for BlobContainer {
+    itpl<'raw> ::core::convert::From<super::BlobContainer<'raw>> for BlobContainer {
         fn from(value: super::BlobContainer) -> Self {
             Self {
                 blobs: value.blobs.into_iter().map(|value| value.into()).collect(),
@@ -2592,7 +2592,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for BlobContainer {
+    itpl<'raw> ::bebop::SubRecord<'raw> for BlobContainer {
         const MIN_SERIALIZED_SIZE: usize = <::std::vec::Vec<Blob>>::MIN_SERIALIZED_SIZE;
 
         #[inline]
@@ -2621,7 +2621,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for BlobContainer {}
+    itpl<'raw> ::bebop::Record<'raw> for BlobContainer {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub struct Authority {
@@ -2629,7 +2629,7 @@ pub mod owned {
         pub address: ::std::vec::Vec<u8>,
     }
 
-    impl<'raw> ::core::convert::From<super::Authority<'raw>> for Authority {
+    itpl<'raw> ::core::convert::From<super::Authority<'raw>> for Authority {
         fn from(value: super::Authority) -> Self {
             Self {
                 scopes: value.scopes.into_iter().map(|value| value.into()).collect(),
@@ -2638,7 +2638,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for Authority {
+    itpl<'raw> ::bebop::SubRecord<'raw> for Authority {
         const MIN_SERIALIZED_SIZE: usize = <::std::vec::Vec<String>>::MIN_SERIALIZED_SIZE
             + <::std::vec::Vec<u8>>::MIN_SERIALIZED_SIZE;
 
@@ -2676,7 +2676,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for Authority {}
+    itpl<'raw> ::bebop::Record<'raw> for Authority {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub struct Action {
@@ -2684,7 +2684,7 @@ pub mod owned {
         pub data: ActionData,
     }
 
-    impl<'raw> ::core::convert::From<super::Action<'raw>> for Action {
+    itpl<'raw> ::core::convert::From<super::Action<'raw>> for Action {
         fn from(value: super::Action) -> Self {
             Self {
                 standard: value.standard,
@@ -2693,7 +2693,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for Action {
+    itpl<'raw> ::bebop::SubRecord<'raw> for Action {
         const MIN_SERIALIZED_SIZE: usize =
             <Interface>::MIN_SERIALIZED_SIZE + <ActionData>::MIN_SERIALIZED_SIZE;
 
@@ -2731,7 +2731,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for Action {}
+    itpl<'raw> ::bebop::Record<'raw> for Action {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub enum ActionData {
@@ -2769,7 +2769,7 @@ pub mod owned {
         },
     }
 
-    impl<'raw> ::core::convert::From<super::ActionData<'raw>> for ActionData {
+    itpl<'raw> ::core::convert::From<super::ActionData<'raw>> for ActionData {
         fn from(value: super::ActionData) -> Self {
             match value {
                 super::ActionData::Unknown => Self::Unknown,
@@ -2801,7 +2801,7 @@ pub mod owned {
             }
         }
     }
-    impl<'raw> ::bebop::SubRecord<'raw> for ActionData {
+    itpl<'raw> ::bebop::SubRecord<'raw> for ActionData {
         const MIN_SERIALIZED_SIZE: usize = ::bebop::LEN_SIZE + 1;
 
         fn serialized_size(&self) -> usize {
@@ -3198,7 +3198,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for ActionData {}
+    itpl<'raw> ::bebop::Record<'raw> for ActionData {}
 
     pub use super::MAX_MODULES;
 
@@ -3212,7 +3212,7 @@ pub mod owned {
         pub share: u8,
     }
 
-    impl<'raw> ::core::convert::From<super::RoyaltyTarget<'raw>> for RoyaltyTarget {
+    itpl<'raw> ::core::convert::From<super::RoyaltyTarget<'raw>> for RoyaltyTarget {
         fn from(value: super::RoyaltyTarget) -> Self {
             Self {
                 address: value.address.iter().map(|value| value).collect(),
@@ -3221,7 +3221,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for RoyaltyTarget {
+    itpl<'raw> ::bebop::SubRecord<'raw> for RoyaltyTarget {
         const MIN_SERIALIZED_SIZE: usize =
             <::std::vec::Vec<u8>>::MIN_SERIALIZED_SIZE + <u8>::MIN_SERIALIZED_SIZE;
 
@@ -3259,7 +3259,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for RoyaltyTarget {}
+    itpl<'raw> ::bebop::Record<'raw> for RoyaltyTarget {}
 
     #[derive(Clone, Debug, PartialEq)]
     pub struct Creator {
@@ -3268,7 +3268,7 @@ pub mod owned {
         pub verified: bool,
     }
 
-    impl<'raw> ::core::convert::From<super::Creator<'raw>> for Creator {
+    itpl<'raw> ::core::convert::From<super::Creator<'raw>> for Creator {
         fn from(value: super::Creator) -> Self {
             Self {
                 address: value.address.iter().map(|value| value).collect(),
@@ -3278,7 +3278,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::SubRecord<'raw> for Creator {
+    itpl<'raw> ::bebop::SubRecord<'raw> for Creator {
         const MIN_SERIALIZED_SIZE: usize = <::std::vec::Vec<u8>>::MIN_SERIALIZED_SIZE
             + <u8>::MIN_SERIALIZED_SIZE
             + <bool>::MIN_SERIALIZED_SIZE;
@@ -3324,7 +3324,7 @@ pub mod owned {
         }
     }
 
-    impl<'raw> ::bebop::Record<'raw> for Creator {}
+    itpl<'raw> ::bebop::Record<'raw> for Creator {}
 
     pub use super::Lifecycle;
 

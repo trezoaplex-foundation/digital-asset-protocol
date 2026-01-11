@@ -1,6 +1,6 @@
 use std::io::{Error, ErrorKind};
-use solana_program::pubkey::Pubkey;
-use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, SolanaMock};
+use trezoa_program::pubkey::Pubkey;
+use crate::poc::{Action, Asset, Lifecycle, Modules, ModuleType, TrezoaMock};
 use std::io::Result;
 use crate::poc::creators::CreatorsData;
 use borsh::{BorshDeserialize, BorshSerialize};
@@ -28,7 +28,7 @@ struct Royalty {
 
 /// ROYALTIES ENFORCED AT PROTOCOL LEVEL like EIP 2981
 
-impl ModuleType for Royalty {
+itpl ModuleType for Royalty {
     fn id(&self) -> Modules {
         Modules::Royalty
     }
@@ -60,11 +60,11 @@ impl ModuleType for Royalty {
                     match data.royalty_target {
                         RoyaltyTarget::Fanout(target) => {
                             let royalty = sale_price * (data.sale_royalty_percent as u64 / 100);
-                            SolanaMock::transfer_money(buyer, target, royalty);
+                            TrezoaMock::transfer_money(buyer, target, royalty);
                         }
                         RoyaltyTarget::Single(target) => {
                             let royalty = sale_price * (data.sale_royalty_percent as u64 / 100);
-                            SolanaMock::transfer_money(buyer, target, royalty);
+                            TrezoaMock::transfer_money(buyer, target, royalty);
                         }
                         RoyaltyTarget::Creators => {
                             let get_creators_data: Option<CreatorsData> = asset_mut.get_data(&Modules::Creators);
@@ -73,12 +73,12 @@ impl ModuleType for Royalty {
                             }
                             let royalty = sale_price * (data.sale_royalty_percent as u64 / 100);
                             for c in get_creators_data.unwrap().creators {
-                                SolanaMock::transfer_money(buyer, c.address, royalty * (c.share as u64 / 100));
+                                TrezoaMock::transfer_money(buyer, c.address, royalty * (c.share as u64 / 100));
                             }
                         }
                     }
                 }
-                //EXAMPLE of module data changing
+                //EXATPLE of module data changing
                 asset_mut.set_data::<RoyaltyData>(&Modules::Royalty, data).map(|_|{
                     asset_mut
                 })

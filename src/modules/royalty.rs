@@ -1,7 +1,7 @@
 use std::io::BufWriter;
 use bebop::{Record, SliceWrapper, SubRecord};
 use lazy_static::lazy_static;
-use solana_program::account_info::AccountInfo;
+use trezoa_program::account_info::AccountInfo;
 use crate::api::DigitalAssetProtocolError;
 use crate::blob::{Asset, Blob};
 use crate::generated::schema::{ModuleType};
@@ -12,7 +12,7 @@ pub struct OwnershipModuleProcessor {}
 
 pub static OWNERSHIP_MODULE_PROCESSOR: OwnershipModuleProcessor = OwnershipModuleProcessor {};
 
-impl ModuleProcessor for OwnershipModuleProcessor {
+itpl ModuleProcessor for OwnershipModuleProcessor {
     fn create<'raw>(&self,
                     asset: &mut Asset<'raw>,
                     module_data: Option<ModuleDataWrapper<'raw>>,

@@ -1,7 +1,7 @@
 // @ts-check
 'use strict';
 const path = require('path');
-const {LOCALHOST, tmpLedgerDir } = require('@metaplex-foundation/amman');
+const {LOCALHOST, tmpLedgerDir } = require('@trezoaplex-foundation/amman');
 const localDeployDir = path.join(__dirname, 'target', 'deploy');
 
 const programIds = {
@@ -12,7 +12,7 @@ function localDeployPath(programName) {
   return path.join(localDeployDir, `${programName}.so`);
 }
 const programs = [
-  { label: "Digital Asset Protocol", programId: programIds.dasset, deployPath: localDeployPath('mpl_asset') },
+  { label: "Digital Asset Protocol", programId: programIds.dasset, deployPath: localDeployPath('tpl_asset') },
 ];
 
 const validator = {

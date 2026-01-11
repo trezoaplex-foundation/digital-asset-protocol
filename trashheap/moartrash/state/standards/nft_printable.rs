@@ -1,6 +1,6 @@
 
 
-impl NFT_Printable {
+itpl NFT_Printable {
     pub fn new() -> Self {
         let mut mset =BTreeSet::new();
         mset.insert(Module::Ownership);
@@ -15,7 +15,7 @@ impl NFT_Printable {
     }
 }
 
-impl Standardized for NFT_Printable {
+itpl Standardized for NFT_Printable {
     fn standard(&self) -> Standard {
         Standard::NFT
     }

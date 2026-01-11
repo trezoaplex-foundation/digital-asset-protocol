@@ -3,8 +3,8 @@ use crate::state::blob::{Blob, Blobbed, BlobBorsh, BlobId};
 use std::collections::{BTreeMap, BTreeSet};
 use std::io::Write;
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_program::msg;
-use solana_program::program_error::ProgramError;
+use trezoa_program::msg;
+use trezoa_program::program_error::ProgramError;
 use crate::modules::{Module};
 use thiserror::Error;
 use crate::state::asset::AssetError::InvalidAsset;
@@ -25,7 +25,7 @@ pub struct Asset<'a> {
     runtime: RuntimeAsset<'a>
 }
 
-impl Asset<'_> {
+itpl Asset<'_> {
     pub fn modules(&self) -> BTreeSet<&Module> {
         self.data.keys().map(|ik|{
             match ik {
@@ -69,7 +69,7 @@ pub struct RuntimeAsset<'a> {
 }
 
 
-impl Asset<'_> {
+itpl Asset<'_> {
 
     pub fn try_deserialize<'a>(bytes: &mut &[u8]) -> Result<Asset<'a>, AssetError> {
         // We need to have some sort of size limit

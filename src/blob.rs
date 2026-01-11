@@ -2,8 +2,8 @@ use std::cell::{Ref, RefMut};
 use std::collections::BTreeMap;
 use crate::api::DigitalAssetProtocolError;
 use bebop::{Record, SliceWrapper, SubRecord};
-use solana_program::program_memory::sol_memset;
-use solana_program::pubkey::Pubkey;
+use trezoa_program::program_memory::sol_memset;
+use trezoa_program::pubkey::Pubkey;
 use crate::generated::schema::owned::{Blob, BlobContainer, DataItem, ModuleType, DataItemValue, ModuleData};
 
 use crate::module::{ModuleDataWrapper, SchemaId};
@@ -15,7 +15,7 @@ pub struct Asset {
 }
 
 
-impl Asset {
+itpl Asset {
     pub fn new() -> Asset {
         Asset {
             layout: BTreeMap::new(),

@@ -1,6 +1,6 @@
-use solana_program::account_info::AccountInfo;
-use solana_program::program_memory::sol_memcmp;
-use solana_program::pubkey::{Pubkey, PUBKEY_BYTES};
+use trezoa_program::account_info::AccountInfo;
+use trezoa_program::program_memory::sol_memcmp;
+use trezoa_program::pubkey::{Pubkey, PUBKEY_BYTES};
 use crate::api::DigitalAssetProtocolError;
 
 pub fn assert_derivation(
@@ -45,7 +45,7 @@ pub fn assert_empty(
     account: &AccountInfo,
     err: DigitalAssetProtocolError,
 ) -> Result<(), DigitalAssetProtocolError> {
-    let clause = cmp_pubkeys(account.owner, &solana_program::system_program::id()) &&
+    let clause = cmp_pubkeys(account.owner, &trezoa_program::system_program::id()) &&
         account.data_len() == 0 &&
         account.lamports() == 0;
     if clause {

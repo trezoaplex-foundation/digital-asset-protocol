@@ -1,12 +1,12 @@
 use std::cell::{Ref, RefMut};
 use bebop::{DeserializeError, Record};
-use solana_program::{
+use trezoa_program::{
     decode_error::DecodeError,
     msg,
     program_error::{PrintProgramError, ProgramError},
 };
-use solana_program::account_info::AccountInfo;
-use solana_program::pubkey::Pubkey;
+use trezoa_program::account_info::AccountInfo;
+use trezoa_program::pubkey::Pubkey;
 use thiserror::Error;
 use crate::api::DigitalAssetProtocolError::ActionError;
 use crate::interfaces::{asset};
@@ -25,7 +25,7 @@ pub struct Action<'info> {
     pub remaining_accounts: Vec<AccountInfo<'info>>,
 }
 
-impl<'info> Action<'info> {
+itpl<'info> Action<'info> {
     pub fn run(&mut self) -> Result<(), DigitalAssetProtocolError> {
         self.context.run()
     }
@@ -40,7 +40,7 @@ impl<'info> Action<'info> {
                 let d = asset::UpdateV1::new(accounts, action_data)?;
                 Ok((Box::new(d.0), d.1))
             }
-            _ => Err(DigitalAssetProtocolError::InterfaceNoImpl)
+            _ => Err(DigitalAssetProtocolError::InterfaceNoItpl)
         }
     }
 
@@ -62,7 +62,7 @@ impl<'info> Action<'info> {
                     remaining_accounts: accounts[action_context.1..].to_vec(),
                 })
             }
-            _ => Err(DigitalAssetProtocolError::InterfaceNoImpl)
+            _ => Err(DigitalAssetProtocolError::InterfaceNoItpl)
         };
     }
 }
@@ -85,31 +85,31 @@ pub enum DigitalAssetProtocolError {
     #[error("Deserialization failed: {0}")]
     DeError(String),
 
-    #[error("Interface has no implementation")]
-    InterfaceNoImpl,
+    #[error("Interface has no itplementation")]
+    InterfaceNoItpl,
 
 }
 
-impl PrintProgramError for DigitalAssetProtocolError {
+itpl PrintProgramError for DigitalAssetProtocolError {
     fn print<E>(&self) {
         msg!(&self.to_string());
     }
 }
 
-impl From<DigitalAssetProtocolError> for ProgramError {
+itpl From<DigitalAssetProtocolError> for ProgramError {
     fn from(e: DigitalAssetProtocolError) -> Self {
         msg!(&e.to_string());
         ProgramError::Custom(0)
     }
 }
 
-impl Into<DigitalAssetProtocolError> for DeserializeError {
+itpl Into<DigitalAssetProtocolError> for DeserializeError {
     fn into(self) -> DigitalAssetProtocolError {
         DigitalAssetProtocolError::DeError(self.to_string())
     }
 }
 
-impl<T> DecodeError<T> for DigitalAssetProtocolError {
+itpl<T> DecodeError<T> for DigitalAssetProtocolError {
     fn type_of() -> &'static str {
         "Dasset Error"
     }
@@ -143,7 +143,7 @@ pub trait AccountConstraints {
     fn validate_constraint(&mut self) -> Result<(), DigitalAssetProtocolError>;
 }
 
-impl<'info> AccountConstraints for AccountInfoContext<'info> {
+itpl<'info> AccountConstraints for AccountInfoContext<'info> {
     fn validate_constraint(&mut self) -> Result<(), DigitalAssetProtocolError> {
         if self.constraints.program && !self.info.executable {
             return Err(DigitalAssetProtocolError::InterfaceError(format!("Account with key {} needs to be a program", self.info.key)));

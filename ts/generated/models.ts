@@ -1265,10 +1265,10 @@ export namespace DigitalAssetTypes {
     Invalid = 0,
     Core = 1,
     MultiMedia = 2,
-    SimpleImage = 3,
-    SimpleAudio = 4,
-    Simple3d = 5,
-    SimpleText = 6,
+    SitpleImage = 3,
+    SitpleAudio = 4,
+    Sitple3d = 5,
+    SitpleText = 6,
     MusicRecording = 7,
   }
 

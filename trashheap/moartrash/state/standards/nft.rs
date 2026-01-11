@@ -6,7 +6,7 @@ pub struct NFTStandard {
     modules: BTreeSet<Module>
 }
 
-impl NFTStandard {
+itpl NFTStandard {
     
     pub fn new() -> Self {
         let mut mset = BTreeSet::new();
@@ -21,7 +21,7 @@ impl NFTStandard {
     }
 }
 
-impl Standardized for NFTStandard {
+itpl Standardized for NFTStandard {
     fn standard(&self) -> Standard {
         Standard::NFT
     }
