@@ -183,7 +183,7 @@ dependencies = [
  "flate2",
  "futures-core",
  "memchr",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "tokio",
 ]
 
@@ -1227,7 +1227,7 @@ dependencies = [
  "futures-sink",
  "futures-task",
  "memchr",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "pin-utils",
  "slab",
 ]
@@ -1415,7 +1415,7 @@ checksum = "1ff4f84919677303da5f147645dbea6b1881f368d03ac84e1dc09031ebd7b2c6"
 dependencies = [
  "bytes",
  "http",
- "pin-project-lite",
+ "pin-trezoa-lite",
 ]
 
 [[package]]
@@ -1452,7 +1452,7 @@ dependencies = [
  "httparse",
  "httpdate",
  "itoa",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "socket2",
  "tokio",
  "tower-service",
@@ -2139,7 +2139,7 @@ dependencies = [
  "js-sys",
  "lazy_static",
  "percent-encoding",
- "pin-project",
+ "pin-trezoa",
  "rand 0.8.5",
  "thiserror",
 ]
@@ -2264,16 +2264,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "pin-project"
+name = "pin-trezoa"
 version = "1.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "58ad3879ad3baf4e44784bc6a718a8698867bb991f8ce24d1bcbe2cfb4c3a75e"
 dependencies = [
- "pin-project-internal",
+ "pin-trezoa-internal",
 ]
 
 [[package]]
-name = "pin-project-internal"
+name = "pin-trezoa-internal"
 version = "1.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "744b6f092ba29c3650faf274db506afd39944f48420f6c86b17cfe0ee1cb36bb"
@@ -2284,7 +2284,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "pin-project-lite"
+name = "pin-trezoa-lite"
 version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e0a7ae3ac2f1173085d398531c705756c94a4c56843785df85a60c1a0afac116"
@@ -2665,7 +2665,7 @@ dependencies = [
  "mime",
  "native-tls",
  "percent-encoding",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "rustls",
  "rustls-pemfile 1.0.0",
  "serde",
@@ -4108,7 +4108,7 @@ dependencies = [
  "futures",
  "humantime",
  "opentelemetry",
- "pin-project",
+ "pin-trezoa",
  "rand 0.8.5",
  "serde",
  "static_assertions",
@@ -4285,7 +4285,7 @@ dependencies = [
  "num_cpus",
  "once_cell",
  "parking_lot 0.11.2",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "signal-hook-registry",
  "tokio-macros",
  "winapi",
@@ -4334,7 +4334,7 @@ dependencies = [
  "educe",
  "futures-core",
  "futures-sink",
- "pin-project",
+ "pin-trezoa",
  "serde",
  "serde_json",
 ]
@@ -4346,7 +4346,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df54d54117d6fdc4e4fea40fe1e4e566b3505700e148a6827e59b34b0d2600d9"
 dependencies = [
  "futures-core",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "tokio",
 ]
 
@@ -4376,7 +4376,7 @@ dependencies = [
  "futures-core",
  "futures-sink",
  "log",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "slab",
  "tokio",
 ]
@@ -4390,7 +4390,7 @@ dependencies = [
  "bytes",
  "futures-core",
  "futures-sink",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "tokio",
  "tracing",
 ]
@@ -4418,7 +4418,7 @@ checksum = "5d0ecdcb44a79f0fe9844f0c4f33a342cbcbb5117de8001e6ba0dc2351327d09"
 dependencies = [
  "cfg-if",
  "log",
- "pin-project-lite",
+ "pin-trezoa-lite",
  "tracing-attributes",
  "tracing-core",
 ]
