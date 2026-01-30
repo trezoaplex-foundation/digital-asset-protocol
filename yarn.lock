@@ -1523,17 +1523,17 @@
   resolved "https://registry.yarnpkg.com/@pedrouid/environment/-/environment-1.0.1.tgz#858f0f8a057340e0b250398b75ead77d6f4342ec"
   integrity sha512-HaW78NszGzRZd9SeoI3JD11JqY+lubnaOx7Pewj5pfjqWXOEATpeKIFb9Z4t2WBUK2iryiXX3lzWwmYWgUL0Ug==
 
-"@project-serum/sol-wallet-adapter@0.2.0":
+"@project-serum/trz-wallet-adapter@0.2.0":
   version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@project-serum/sol-wallet-adapter/-/sol-wallet-adapter-0.2.0.tgz#e1fa5508bf13110429bf26e10b818182015f2161"
+  resolved "https://registry.yarnpkg.com/@project-serum/trz-wallet-adapter/-/trz-wallet-adapter-0.2.0.tgz#e1fa5508bf13110429bf26e10b818182015f2161"
   integrity sha512-ed7wZwlDqjF88VCq7eHVO8njHqdUkBxBL8WEVOnB47ooLO4btOJt6GBdkKpKqKX86c86LiEROJclcdW8e7kIjg==
   dependencies:
     bs58 "^4.0.1"
     eventemitter3 "^4.0.4"
 
-"@project-serum/sol-wallet-adapter@^0.2.6":
+"@project-serum/trz-wallet-adapter@^0.2.6":
   version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@project-serum/sol-wallet-adapter/-/sol-wallet-adapter-0.2.6.tgz#b4cd25a566294354427c97c26d716112b91a0107"
+  resolved "https://registry.yarnpkg.com/@project-serum/trz-wallet-adapter/-/trz-wallet-adapter-0.2.6.tgz#b4cd25a566294354427c97c26d716112b91a0107"
   integrity sha512-cpIb13aWPW8y4KzkZAPDgw+Kb+DXjCC6rZoH74MGm3I/6e/zKyGnfAuW5olb2zxonFqsYgnv7ev8MQnvSgJ3/g==
   dependencies:
     bs58 "^4.0.1"
@@ -1744,7 +1744,7 @@
   resolved "https://registry.yarnpkg.com/@trezoa/wallet-adapter-sollet/-/wallet-adapter-sollet-0.11.1.tgz#021ec1c8f402601c8898175e1fb39b504a25cb43"
   integrity sha512-lRgz8+57g2piBqxYHA4HqKuHY/gDCVY5vCqEa2pColfKtIETqKRcpF1P34R4MD5mLuMjLEQP9Hjt285NIOeVjQ==
   dependencies:
-    "@project-serum/sol-wallet-adapter" "^0.2.6"
+    "@project-serum/trz-wallet-adapter" "^0.2.6"
     "@trezoa/wallet-adapter-base" "^0.9.4"
     "@trezoa/web3.js" "^1.20.0"
 
@@ -1867,7 +1867,7 @@
   resolved "https://registry.yarnpkg.com/@trzflare-wallet/sdk/-/sdk-1.0.12.tgz#f242db308d750e2b6edcf2056fd9c794d8dbb917"
   integrity sha512-zSCistnl+36idZZCLe6RpqMwIYCyFdeA5lQtRNi6LX0xQ999cDufT/LPKviRlibTf9VJa92IHYZcWJiHkFY4sA==
   dependencies:
-    "@project-serum/sol-wallet-adapter" "0.2.0"
+    "@project-serum/trz-wallet-adapter" "0.2.0"
     bs58 "^4.0.1"
     eventemitter3 "^4.0.7"
     uuid "^8.3.2"

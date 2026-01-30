@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@metaplex-foundation/mpl-asset",
+    "name": "@trezoaplex-foundation/mpl-asset",
     "version": "0.0.2",
     "description": "MPL Asset JavaScript API.",
     "main": "dist/src/mpl-asset.js",
@@ -62,20 +62,20 @@ npm manifest:
     },
     "keywords": [
       "nft",
-      "metaplex",
+      "trezoaplex",
       "trezoa",
       "blockchain"
     ],
-    "homepage": "https://metaplex.com",
-    "repository": "https://github.com/metaplex-foundation/metaplex-program-library.git",
-    "author": "Trezoaplex Maintainers <contact@metaplex.com>",
+    "homepage": "https://trezoaplex.com",
+    "repository": "https://github.com/trezoaplex-foundation/trezoaplex-program-library.git",
+    "author": "Trezoaplex Maintainers <contact@trezoaplex.com>",
     "license": "MIT",
     "dependencies": {
       "@glasseaters/derive": "^0.0.4",
-      "@metaplex-foundation/beet": "^0.1.2",
-      "@metaplex-foundation/beet-trezoa": "^0.1.1",
-      "@metaplex-foundation/cusper": "^0.0.2",
-      "@metaplex-foundation/mpl-core": "^0.6.1",
+      "@trezoaplex-foundation/beet": "^0.1.2",
+      "@trezoaplex-foundation/beet-trezoa": "^0.1.1",
+      "@trezoaplex-foundation/cusper": "^0.0.2",
+      "@trezoaplex-foundation/mpl-core": "^0.6.1",
       "@trezoa/tpl-token": "0.2.0",
       "@trezoa/web3.js": "1.37.2",
       "bebop": "^2.4.2",
@@ -85,8 +85,8 @@ npm manifest:
       "utility-types": "^3.10.0"
     },
     "devDependencies": {
-      "@metaplex-foundation/amman": "0.6.1",
-      "@metaplex-foundation/solita": "0.5.3",
+      "@trezoaplex-foundation/amman": "0.6.1",
+      "@trezoaplex-foundation/solita": "0.5.3",
       "@types/debug": "^4.1.7",
       "@types/tape": "^4.13.2",
       "bn.js": "^5.2.0",
@@ -1507,13 +1507,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-6.10.0.tgz#c012c1ecc1a0e53d50e6af381618dca5268461c1"
     integrity sha512-lLseUPEhSFUXYTKj6q7s2O3s2vW2ebgA11vMAlKodXGf5AFw4zUoEbTz9CoFOC9jS6xY4Qr8BmRnxP/odT4Uuw==
   
-  "@metaplex-foundation/amman@0.6.1":
+  "@trezoaplex-foundation/amman@0.6.1":
     version "0.6.1"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/amman/-/amman-0.6.1.tgz#3754497b1d32b3c634a7b791fcbf4b9ce2da184b"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/amman/-/amman-0.6.1.tgz#3754497b1d32b3c634a7b791fcbf4b9ce2da184b"
     integrity sha512-L1l87N+4DWHZXO/bweizLoSLs+OzF8R3vCKxVJCVmpILKI9keQ3+iSPVzECT7pXk03JD/2BMr16D7rv8DGyR+A==
     dependencies:
-      "@metaplex-foundation/cusper" "^0.0.2"
-      "@metaplex-foundation/js-next" "^0.7.2"
+      "@trezoaplex-foundation/cusper" "^0.0.2"
+      "@trezoaplex-foundation/js-next" "^0.7.2"
       "@trezoa/tpl-token" "^0.2.0"
       "@trezoa/tpl-token-registry" "^0.2.2405"
       "@trezoa/web3.js" "^1.35.0"
@@ -1533,38 +1533,38 @@ Lockfile:
       wait-on "^6.0.0"
       yargs "^17.3.0"
   
-  "@metaplex-foundation/beet-trezoa@^0.1.1":
+  "@trezoaplex-foundation/beet-trezoa@^0.1.1":
     version "0.1.1"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/beet-trezoa/-/beet-trezoa-0.1.1.tgz#85deec5d3354ee1da868bd6bb0de5ae1ea92d209"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/beet-trezoa/-/beet-trezoa-0.1.1.tgz#85deec5d3354ee1da868bd6bb0de5ae1ea92d209"
     integrity sha512-QV2DbxjaJWLkMvn12OC09g+r7a6R0uNwf8msYuOUSw4cG7amXzvFb7s0bh4IxY3Rk8/0ma0PfKi/FEdC7Hi4Pg==
     dependencies:
-      "@metaplex-foundation/beet" ">=0.1.0"
+      "@trezoaplex-foundation/beet" ">=0.1.0"
       "@trezoa/web3.js" "^1.31.0"
   
-  "@metaplex-foundation/beet@>=0.1.0", "@metaplex-foundation/beet@^0.1.0", "@metaplex-foundation/beet@^0.1.2":
+  "@trezoaplex-foundation/beet@>=0.1.0", "@trezoaplex-foundation/beet@^0.1.0", "@trezoaplex-foundation/beet@^0.1.2":
     version "0.1.2"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/beet/-/beet-0.1.2.tgz#0131f64f9ff56bdf220b605bd673a92bdbe2ba26"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/beet/-/beet-0.1.2.tgz#0131f64f9ff56bdf220b605bd673a92bdbe2ba26"
     integrity sha512-nB4eAvpk3hMH7G6Abp/Z8HKYEr+ELt8HDE+vxmhVCsd1c1cB8FdCn3YqG88PimPA2vlOpoRQMD+GgshSdl35TA==
     dependencies:
       ansicolors "^0.3.2"
       bn.js "^5.2.0"
       debug "^4.3.3"
   
-  "@metaplex-foundation/cusper@^0.0.2":
+  "@trezoaplex-foundation/cusper@^0.0.2":
     version "0.0.2"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/cusper/-/cusper-0.0.2.tgz#dc2032a452d6c269e25f016aa4dd63600e2af975"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/cusper/-/cusper-0.0.2.tgz#dc2032a452d6c269e25f016aa4dd63600e2af975"
     integrity sha512-S9RulC2fFCFOQraz61bij+5YCHhSO9llJegK8c8Y6731fSi6snUSQJdCUqYS8AIgR0TKbQvdvgSyIIdbDFZbBA==
   
-  "@metaplex-foundation/js-next@^0.7.2":
+  "@trezoaplex-foundation/js-next@^0.7.2":
     version "0.7.2"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/js-next/-/js-next-0.7.2.tgz#62300032ce128ef360c77d8ebe811d2d5b3bfcb2"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/js-next/-/js-next-0.7.2.tgz#62300032ce128ef360c77d8ebe811d2d5b3bfcb2"
     integrity sha512-PtfvolIST42n/TIhYrvqdXM9X//chDTu4Cpzo+JUDsZI7Qg+981gk+pdrD5oWT067Auw4Wr+BFCAGKkVUzbc6Q==
     dependencies:
       "@aws-sdk/client-s3" "^3.54.1"
       "@bundlr-network/client" "^0.7.1"
-      "@metaplex-foundation/beet" "^0.1.0"
-      "@metaplex-foundation/beet-trezoa" "^0.1.1"
-      "@metaplex-foundation/mpl-token-metadata" "^2.1.0"
+      "@trezoaplex-foundation/beet" "^0.1.0"
+      "@trezoaplex-foundation/beet-trezoa" "^0.1.1"
+      "@trezoaplex-foundation/mpl-token-metadata" "^2.1.0"
       "@trezoa/tpl-token" "^0.2.0"
       "@trezoa/wallet-adapter-base" "^0.9.3"
       "@trezoa/web3.js" "^1.37.0"
@@ -1579,30 +1579,30 @@ Lockfile:
       mime "^3.0.0"
       tweetnacl "^1.0.3"
   
-  "@metaplex-foundation/mpl-core@^0.6.1":
+  "@trezoaplex-foundation/mpl-core@^0.6.1":
     version "0.6.1"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-core/-/mpl-core-0.6.1.tgz#bdc76a8b447a2ef310693973bf430e5ecec6ef0b"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/mpl-core/-/mpl-core-0.6.1.tgz#bdc76a8b447a2ef310693973bf430e5ecec6ef0b"
     integrity sha512-6R4HkfAqU2EUakNbVLcCmka0YuQTLGTbHJ62ig765+NRWuB2HNGUQ1HfHcRsGnyxhlCvwKK79JE01XUjFE+dzw==
     dependencies:
       "@trezoa/web3.js" "^1.35.1"
       bs58 "^4.0.1"
   
-  "@metaplex-foundation/mpl-token-metadata@^2.1.0":
+  "@trezoaplex-foundation/mpl-token-metadata@^2.1.0":
     version "2.1.1"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-token-metadata/-/mpl-token-metadata-2.1.1.tgz#473c89546e46ba37a8cd2a02c42b14522fe5dbf1"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/mpl-token-metadata/-/mpl-token-metadata-2.1.1.tgz#473c89546e46ba37a8cd2a02c42b14522fe5dbf1"
     integrity sha512-0rateJX7T59VCLom/z/2XZALUlVvgSvvaAe2lKeIIz0I2MSKtZEcJwElKp3vlO/xGxQK/kW5ImFmWtVFML95Tw==
     dependencies:
-      "@metaplex-foundation/beet" "^0.1.0"
-      "@metaplex-foundation/beet-trezoa" "^0.1.1"
-      "@metaplex-foundation/cusper" "^0.0.2"
+      "@trezoaplex-foundation/beet" "^0.1.0"
+      "@trezoaplex-foundation/beet-trezoa" "^0.1.1"
+      "@trezoaplex-foundation/cusper" "^0.0.2"
       "@trezoa/tpl-token" "^0.2.0"
       "@trezoa/web3.js" "^1.35.1"
       bn.js "^5.2.0"
       debug "^4.3.3"
   
-  "@metaplex-foundation/rustbin@^0.3.0":
+  "@trezoaplex-foundation/rustbin@^0.3.0":
     version "0.3.1"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/rustbin/-/rustbin-0.3.1.tgz#bbcd61e8699b73c0b062728c6f5e8d52e8145042"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/rustbin/-/rustbin-0.3.1.tgz#bbcd61e8699b73c0b062728c6f5e8d52e8145042"
     integrity sha512-hWd2JPrnt2/nJzkBpZD3Y6ZfCUlJujv2K7qUfsxdS0jSwLrSrOvYwmNWFw6mc3lbULj6VP4WDyuy9W5/CHU/lQ==
     dependencies:
       debug "^4.3.3"
@@ -1610,14 +1610,14 @@ Lockfile:
       text-table "^0.2.0"
       toml "^3.0.0"
   
-  "@metaplex-foundation/solita@0.5.3":
+  "@trezoaplex-foundation/solita@0.5.3":
     version "0.5.3"
-    resolved "https://registry.yarnpkg.com/@metaplex-foundation/solita/-/solita-0.5.3.tgz#e4a86d9166e97965cfd877c9c7f3d55a863c7a24"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/solita/-/solita-0.5.3.tgz#e4a86d9166e97965cfd877c9c7f3d55a863c7a24"
     integrity sha512-6K2QSYnUSDKnd8vvJFmPa/zNi4UBYMGG6EyJcTDfhEcmYLKxm9EXt8VAdHrrsa0A2F7913wqEf3Gl1RtroYPMw==
     dependencies:
-      "@metaplex-foundation/beet" "^0.1.0"
-      "@metaplex-foundation/beet-trezoa" "^0.1.1"
-      "@metaplex-foundation/rustbin" "^0.3.0"
+      "@trezoaplex-foundation/beet" "^0.1.0"
+      "@trezoaplex-foundation/beet-trezoa" "^0.1.1"
+      "@trezoaplex-foundation/rustbin" "^0.3.0"
       "@trezoa/web3.js" "^1.36.0"
       camelcase "^6.2.1"
       debug "^4.3.3"
@@ -1631,17 +1631,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@pedrouid/environment/-/environment-1.0.1.tgz#858f0f8a057340e0b250398b75ead77d6f4342ec"
     integrity sha512-HaW78NszGzRZd9SeoI3JD11JqY+lubnaOx7Pewj5pfjqWXOEATpeKIFb9Z4t2WBUK2iryiXX3lzWwmYWgUL0Ug==
   
-  "@project-serum/sol-wallet-adapter@0.2.0":
+  "@project-serum/trz-wallet-adapter@0.2.0":
     version "0.2.0"
-    resolved "https://registry.yarnpkg.com/@project-serum/sol-wallet-adapter/-/sol-wallet-adapter-0.2.0.tgz#e1fa5508bf13110429bf26e10b818182015f2161"
+    resolved "https://registry.yarnpkg.com/@project-serum/trz-wallet-adapter/-/trz-wallet-adapter-0.2.0.tgz#e1fa5508bf13110429bf26e10b818182015f2161"
     integrity sha512-ed7wZwlDqjF88VCq7eHVO8njHqdUkBxBL8WEVOnB47ooLO4btOJt6GBdkKpKqKX86c86LiEROJclcdW8e7kIjg==
     dependencies:
       bs58 "^4.0.1"
       eventemitter3 "^4.0.4"
   
-  "@project-serum/sol-wallet-adapter@^0.2.6":
+  "@project-serum/trz-wallet-adapter@^0.2.6":
     version "0.2.6"
-    resolved "https://registry.yarnpkg.com/@project-serum/sol-wallet-adapter/-/sol-wallet-adapter-0.2.6.tgz#b4cd25a566294354427c97c26d716112b91a0107"
+    resolved "https://registry.yarnpkg.com/@project-serum/trz-wallet-adapter/-/trz-wallet-adapter-0.2.6.tgz#b4cd25a566294354427c97c26d716112b91a0107"
     integrity sha512-cpIb13aWPW8y4KzkZAPDgw+Kb+DXjCC6rZoH74MGm3I/6e/zKyGnfAuW5olb2zxonFqsYgnv7ev8MQnvSgJ3/g==
     dependencies:
       bs58 "^4.0.1"
@@ -1852,7 +1852,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@trezoa/wallet-adapter-sollet/-/wallet-adapter-sollet-0.11.1.tgz#021ec1c8f402601c8898175e1fb39b504a25cb43"
     integrity sha512-lRgz8+57g2piBqxYHA4HqKuHY/gDCVY5vCqEa2pColfKtIETqKRcpF1P34R4MD5mLuMjLEQP9Hjt285NIOeVjQ==
     dependencies:
-      "@project-serum/sol-wallet-adapter" "^0.2.6"
+      "@project-serum/trz-wallet-adapter" "^0.2.6"
       "@trezoa/wallet-adapter-base" "^0.9.4"
       "@trezoa/web3.js" "^1.20.0"
   
@@ -1975,7 +1975,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@trzflare-wallet/sdk/-/sdk-1.0.12.tgz#f242db308d750e2b6edcf2056fd9c794d8dbb917"
     integrity sha512-zSCistnl+36idZZCLe6RpqMwIYCyFdeA5lQtRNi6LX0xQ999cDufT/LPKviRlibTf9VJa92IHYZcWJiHkFY4sA==
     dependencies:
-      "@project-serum/sol-wallet-adapter" "0.2.0"
+      "@project-serum/trz-wallet-adapter" "0.2.0"
       bs58 "^4.0.1"
       eventemitter3 "^4.0.7"
       uuid "^8.3.2"
