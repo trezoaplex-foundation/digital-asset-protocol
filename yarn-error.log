@@ -28,11 +28,11 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@trezoaplex-foundation/mpl-asset",
+    "name": "@trezoaplex-foundation/tpl-asset",
     "version": "0.0.2",
-    "description": "MPL Asset JavaScript API.",
-    "main": "dist/src/mpl-asset.js",
-    "types": "dist/src/mpl-asset.d.ts",
+    "description": "TPL Asset JavaScript API.",
+    "main": "dist/src/tpl-asset.js",
+    "types": "dist/src/tpl-asset.d.ts",
     "scripts": {
       "compile-bebop": "bebopc",
       "check:publish-ready": "yarn build && yarn test",
@@ -75,7 +75,7 @@ npm manifest:
       "@trezoaplex-foundation/beet": "^0.1.2",
       "@trezoaplex-foundation/beet-trezoa": "^0.1.1",
       "@trezoaplex-foundation/cusper": "^0.0.2",
-      "@trezoaplex-foundation/mpl-core": "^0.6.1",
+      "@trezoaplex-foundation/tpl-core": "^0.6.1",
       "@trezoa/tpl-token": "0.2.0",
       "@trezoa/web3.js": "1.37.2",
       "bebop": "^2.4.2",
@@ -1564,7 +1564,7 @@ Lockfile:
       "@bundlr-network/client" "^0.7.1"
       "@trezoaplex-foundation/beet" "^0.1.0"
       "@trezoaplex-foundation/beet-trezoa" "^0.1.1"
-      "@trezoaplex-foundation/mpl-token-metadata" "^2.1.0"
+      "@trezoaplex-foundation/tpl-token-metadata" "^2.1.0"
       "@trezoa/tpl-token" "^0.2.0"
       "@trezoa/wallet-adapter-base" "^0.9.3"
       "@trezoa/web3.js" "^1.37.0"
@@ -1579,17 +1579,17 @@ Lockfile:
       mime "^3.0.0"
       tweetnacl "^1.0.3"
   
-  "@trezoaplex-foundation/mpl-core@^0.6.1":
+  "@trezoaplex-foundation/tpl-core@^0.6.1":
     version "0.6.1"
-    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/mpl-core/-/mpl-core-0.6.1.tgz#bdc76a8b447a2ef310693973bf430e5ecec6ef0b"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/tpl-core/-/tpl-core-0.6.1.tgz#bdc76a8b447a2ef310693973bf430e5ecec6ef0b"
     integrity sha512-6R4HkfAqU2EUakNbVLcCmka0YuQTLGTbHJ62ig765+NRWuB2HNGUQ1HfHcRsGnyxhlCvwKK79JE01XUjFE+dzw==
     dependencies:
       "@trezoa/web3.js" "^1.35.1"
       bs58 "^4.0.1"
   
-  "@trezoaplex-foundation/mpl-token-metadata@^2.1.0":
+  "@trezoaplex-foundation/tpl-token-metadata@^2.1.0":
     version "2.1.1"
-    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/mpl-token-metadata/-/mpl-token-metadata-2.1.1.tgz#473c89546e46ba37a8cd2a02c42b14522fe5dbf1"
+    resolved "https://registry.yarnpkg.com/@trezoaplex-foundation/tpl-token-metadata/-/tpl-token-metadata-2.1.1.tgz#473c89546e46ba37a8cd2a02c42b14522fe5dbf1"
     integrity sha512-0rateJX7T59VCLom/z/2XZALUlVvgSvvaAe2lKeIIz0I2MSKtZEcJwElKp3vlO/xGxQK/kW5ImFmWtVFML95Tw==
     dependencies:
       "@trezoaplex-foundation/beet" "^0.1.0"
